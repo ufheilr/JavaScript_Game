@@ -1,29 +1,136 @@
-img {
-    width: 180px;
-    height: auto;
-  }
+body {
+  background-color:  rgb(253, 255, 163);
+  margin: 20;
+}
+
+/* Heading */
+.heading {
+  background-color: rgb(253, 255, 163);
+  margin: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.heading h1 {
+  color: white;
+  margin: 0;
+}
+
+/* Choice */
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0rem;
+  border-style: solid;
+  margin-top: 10px;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-style: solid;
+  padding: 20px;
+  height: 275px;
+}
+
+.images {
+  width: 20%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.images img:nth-of-type(1) {
+  opacity: 50%;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+  margin-right: 15px;
+  height: 100px;
+  width:300px;
+}
+
+.images img:nth-of-type(2) {
+  opacity: 50%;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+}
+
+.images img:nth-of-type(3) {
+  opacity: 50%;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+  height: 100px;
+  width:300px;
+}
+
+.images img:hover {
+  opacity: 100%;
+}
+
+/* Hr */
+hr {
+  border-color: black;
+  width: 50%;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-width: 2px;
+  border-radius: 40px;
+}
+
+/* Results */
+
+.results {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.results h1, h2 {
+  margin-top: 5px;
+}
+
+/* Scoreboard */
+.scoreboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-style: solid;
+  width: 30%;
+  margin: auto;
+}
+
+.record {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  border-style: solid;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.record p {
+  font-size: 20px;
+  margin-top:0;
+  margin-bottom: 0;
+}
+
+/* Reset */
+.reset {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Media Query */
+@media screen and (max-width: 1080px) {
   main {
-    font-size: 125%;
-    display: flex;
-    flex-direction: column;
-    flex-basis: 90vw;
-    align-items: center;
-    padding: 2rem;
+      grid-template-columns: 1fr;
   }
-  section {
-    margin-top: 2rem;
-    width: 100%;
-    text-align: center;
-  }
-  section span {
-    min-width: 50px;
-    text-decoration: underline;
-  }
-  hr {
-    height: 2px;
-    color: black;
-    width: 100%;
-  }
-  button {
-    cursor: pointer;
-  }
+}

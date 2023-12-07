@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>eg_coin-toss</title>
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="css/norm.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <main>
-    <h1>Coin Flip Game</h1>
+    <section class="heading">
+        <header>
+            <h1>Rock Paper Scissors Game</h1>
+        </header>
+    </section>
+    <main class="choice">
+        <section class="playerChoice">
+            <div class="images">
+                <img id="rock-img" src="svg/rock.svg" alt="Rock" onclick="play(1)">
+                <img id="paper-img" src="svg/paper.svg" alt="Paper" onclick="play(2)">
+                <img id="scissors-img" src="svg/scissors.svg" alt="Scissors" onclick="play(3)">
+            </div>
+        </section>
+        <section class="computerChoice">
+            <img id="dot-img" src="svg/dot.svg" alt="dot">
+        </section>
+    </main>
     <hr>
-    <section id="choice">
-      <h2>Pick a Side</h2>
-      <button id="heads" onclick="runGame('heads')">
-        <img src="svg/coin-head.svg" alt="heads">
-      </button>
-      <button id="tails" onclick="runGame('tails')">
-        <img src="svg/coin-tail.svg" alt="tails">
-      </button>
+    <section class="results">
+        <h1 id="result">Result</h1>
+        <h2 id="verdict"></h2>
     </section>
-    <section id="output">
-      <h2>Game Result</h2>
-      <p>You predicted <span id="prediction"> </span>.</p>
-      <p>The flip came up <span id="flip"> </span>.</p>
-      <p>That's a <span id="result"> </span>.</p>
+    <section class="scoreboard">
+        <h1>W/L/T</h1>
+        <div class="record">
+            <p id="wins">0</p>
+            <p>-</p>
+            <p id="losses">0</p>
+            <p>-</p>
+            <p id="ties">0</p>
+        </div>
     </section>
-    <section id="storage">
-      <h2>Score Board</h2>
-      <p>You've played <span id="count">0</span> games.</p>
-      <p>You have <span id="wins">0</span> wins and <span id="losses">0</span> losses.</p>
-      <button onclick="resetScore()" id="reset">Reset Score</button>
-    </section>
-  </main>
-  <script src="js/logic.js"></script>
+    <div class="reset"> 
+        <button onclick="reset()">Reset</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
